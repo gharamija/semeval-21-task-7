@@ -42,5 +42,3 @@ class Word2VecEncoder:
         vocabulary = set(self.model.wv.index_to_key)
         return np.vstack(
             [average_word_vectors(tokens, self.model, vocabulary, num_features) for tokens in sentence])
-
-    # data.apply(word_tokenize)
